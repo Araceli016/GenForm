@@ -1,10 +1,17 @@
 export const validateHeaders = (headers: string[]): boolean => {
-  const requiredHeaders = new Set([
+  const requiredHeaders = [
     'Nombres estudiante',
     'Apellidos estudiante',
     'Primaria/secundaria',
     'Curso',
     'Fecha de nacimiento',
-  ]);
-  return headers.some((h) => requiredHeaders.has(h));
+  ];
+
+  for (const header of requiredHeaders) {
+    if (!headers.includes(header)) {
+      return false;
+    }
+  }
+
+  return true;
 };

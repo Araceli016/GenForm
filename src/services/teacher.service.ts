@@ -1,5 +1,15 @@
 import { Teacher } from '../models/types';
 
 export const validateTeacher = (teacher: Teacher): boolean => {
-  return teacher.email.length > 0;
+  // Validar correo
+  const email = teacher.email;
+
+  if (!email || email.trim() === '') {
+    return false;
+  }
+
+  const hasAt = email.includes('@');
+  const hasDot = email.includes('.');
+
+  return hasAt && hasDot;
 };

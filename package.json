@@ -2,10 +2,10 @@
   "name": "genform",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "lint": "eslint .",
+    "lint": "eslint \"src/**/*.{ts,js}\"",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "build": "tsc",
@@ -21,12 +21,18 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.0",
     "jest": "^30.3.0",
     "lint-staged": "^15.0.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.4.9",
+    "typescript": "^5.5.4"
   }
 }

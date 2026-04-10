@@ -1,3 +1,3 @@
-"use strict";
-const message = 'GenForm funcionando correctamente';
-console.log(message);
+'use strict';
+const message = 'funcionando correctamente';
+console.warn(message);

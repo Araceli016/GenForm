@@ -1,2 +1,2 @@
-const message: string = 'GenForm funcionando correctamente';
-console.log(message);
+const message: string = 'funcionando correctamente';
+console.warn(message);
